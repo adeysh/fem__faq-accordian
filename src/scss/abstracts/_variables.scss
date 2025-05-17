@@ -22,7 +22,9 @@
 
     // font-size
     --fs-body: #{rem(16)};
+    --fs-small: #{rem(18)};
     --fs-medium: #{rem(24)};
+    --fs-large: #{rem(32)};
 
     // font-weight
     --fw-regular: 400;
@@ -35,12 +37,12 @@
         font-family: var(--ff);
         font-weight: var(--fw-bold);
         font-style: normal;
-        font-size: var(--fs-medium);
+        font-size: var(--fs-large);
     }
 
     .text-heading-m {
         font-family: var(--ff);
-        font-weight: var(--fw-semi-bold);
+        font-weight: var(--fw-bold);
         font-style: normal;
         font-size: var(--fs-body);
     }

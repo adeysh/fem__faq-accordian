@@ -1,0 +1,84 @@
+@use '../abstracts' as a;
+
+.faq-card {
+    background-color: var(--White);
+    position: absolute;
+    top: -100px;
+    border-radius: a.rem(8);
+    padding: a.rem(32);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    margin-block-end: a.rem(100);
+
+    @include a.bp($from: "mobile-large") {
+        top: -50px;
+    }
+
+    @include a.bp($from: "tablet") {
+        top: -100px;
+    }
+
+    @include a.bp($from: "desktop") {
+        top: -150px;
+    }
+
+    &__header {
+        @include a.flexbox($align: center, $justify: flex-start, $gap: a.rem(24));
+    }
+
+    &__icon {
+        width: a.rem(28);
+    }
+
+    &__content {
+        width: 100%;
+
+        .faq-card__accordion-item:last-child {
+            border: none;
+            padding-block-end: 0;
+        }
+    }
+
+    &__accordion-item {
+        padding-block: a.rem(24);
+        border-bottom: 2px solid var(--Magnolia);
+        @include a.flexbox($direction: column, $gap: a.rem(24))
+    }
+
+    &__accordion-header {
+
+        .accordion-btn {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            width: 100%;
+
+            .accordion-title {
+                text-align: left;
+                flex: 1;
+            }
+
+            .icon-expand {
+                display: inline;
+            }
+
+            .icon-contract {
+                display: inline;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            @include a.flexbox($align: center, $justify: space-between);
+
+        }
+    }
+
+    &__accordion-panel {
+        color: var(--Trendy-Pink);
+    }
+
+    // .panel {}
+
+    // .panel:not([aria-hidden="true"]) {}
+}

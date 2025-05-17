@@ -9,4 +9,14 @@ body {
     position: relative;
     font-family: var(--ff);
     font-size: var(--fs-body);
+    background-color: var(--Magnolia);
+}
+
+main {
+    height: 100%;
+}
+
+h1,
+h2 {
+    margin: 0;
 }

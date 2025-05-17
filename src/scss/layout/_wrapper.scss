@@ -1,0 +1,11 @@
+@use '../abstracts' as a;
+
+.wrapper {
+    @include a.flexbox($direction: column, $align: center, $justify: center);
+    position: relative;
+}
+
+.faq-card {
+    width: min(a.rem(700), 100% - a.rem(40));
+    @include a.flexbox($direction: column, $align: flex-start);
+}
