@@ -7,7 +7,6 @@
     border-radius: a.rem(8);
     padding: a.rem(32);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
-    margin-block-end: a.rem(100);
 
     @include a.bp($from: "mobile-large") {
         top: -50px;
@@ -23,6 +22,7 @@
 
     &__header {
         @include a.flexbox($align: center, $justify: flex-start, $gap: a.rem(24));
+
     }
 
     &__icon {
@@ -32,53 +32,83 @@
     &__content {
         width: 100%;
 
-        .faq-card__accordion-item:last-child {
-            border: none;
-            padding-block-end: 0;
-        }
-    }
+        .accordion {
+            padding: 0;
 
-    &__accordion-item {
-        padding-block: a.rem(24);
-        border-bottom: 2px solid var(--Magnolia);
-        @include a.flexbox($direction: column, $gap: a.rem(24))
+            li {
+                padding-block: a.rem(24);
+                @include a.flexbox($direction: column, $justify: center);
+
+
+                border-bottom: 2px solid var(--Magnolia);
+
+                &:last-child {
+                    border-bottom: none;
+                    padding-block-end: 0;
+                }
+
+                label {
+                    @include a.flexbox($align: center, $justify: space-between);
+                    cursor: pointer;
+
+                    .icon-expand {
+                        display: inline;
+                    }
+
+                    .icon-contract {
+                        display: inline;
+                    }
+
+                    .hidden {
+                        display: none;
+                    }
+
+                    .accordion-title {
+                        text-align: left;
+                        flex: 1;
+                    }
+                }
+
+                input[type="radio"] {
+                    display: none;
+                }
+
+                .content {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+                }
+            }
+
+            .accordion-panel {
+                p {
+                    color: var(--Trendy-Pink);
+                }
+            }
+
+            input[type="radio"]:checked+label+.content {
+                max-height: 500px;
+                /* fixed value */
+                padding-block: 1rem;
+            }
+
+            input[type="radio"]:checked+label {
+                .icon-expand {
+                    display: none;
+                }
+
+                .icon-contract {
+                    display: inline;
+                }
+            }
+
+            input:checked~.content {
+                padding-block-start: a.rem(24);
+            }
+        }
     }
 
     &__accordion-header {
-
-        .accordion-btn {
-            background-color: transparent;
-            border: none;
-            padding: 0;
-            width: 100%;
-
-            .accordion-title {
-                text-align: left;
-                flex: 1;
-            }
-
-            .icon-expand {
-                display: inline;
-            }
-
-            .icon-contract {
-                display: inline;
-            }
-
-            .hidden {
-                display: none;
-            }
-
-            @include a.flexbox($align: center, $justify: space-between);
-
-        }
+        list-style: none;
     }
-
-    &__accordion-panel {
-        color: var(--Trendy-Pink);
-    }
-
-    // .panel {}
-
-    // .panel:not([aria-hidden="true"]) {}
 }

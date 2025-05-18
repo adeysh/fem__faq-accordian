@@ -14,9 +14,11 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
         .attribution {
-            font-size: 11px;
+            font-size: 16px;
             text-align: center;
-            display: none;
+            position: absolute;
+            left: 0;
+            right: 0;
         }
 
         .attribution a {
@@ -48,13 +50,14 @@
             </div>
 
             <div class="faq-card__content">
-                <div class="faq-card__accordion-item">
-                    <h2 class="faq-card__accordion-header text-heading-m">
-                        <button class="accordion-btn" type="button" id="accordion-header-1" aria-expanded="false"
-                            aria-controls="accordion-panel-1">
+                <ul class="accordion">
+                    <li class="faq-card__accordion-header text-heading-m">
+                        <input type="radio" name="accordion" id="accordion-header-1">
+                        <label for="accordion-header-1">
                             <span class="accordion-title">
                                 What is Frontend Mentor, and how will it help me?
                             </span>
+
                             <svg class="icon-expand" xmlns="http://www.w3.org/2000/svg" width="30" height="31"
                                 fill="none" viewBox="0 0 30 31" alt="Expanding icon" focusable="false"
                                 aria-hidden="true">
@@ -68,25 +71,24 @@
                                 <path fill="#301534"
                                     d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z" />
                             </svg>
-                        </button>
-                    </h2>
-                    <section class="faq-card__accordion-panel" hidden id="accordion-panel-1"
-                        aria-labelledby="accordion-header-1">
-                        <p class="text-body">
-                            Frontend Mentor offers realistic coding challenges to help developers improve their
-                            frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
-                            all levels and ideal for portfolio building.
-                        </p>
-                    </section>
-                </div>
+                        </label>
 
-                <div class="faq-card__accordion-item">
-                    <h2 class="faq-card__accordion-header text-heading-m">
-                        <button class="accordion-btn" type="button" id="accordion-header-2" aria-expanded="false"
-                            aria-controls="accordion-panel-2">
+                        <div class="content accordion-panel" id="accordion-panel-1"
+                            aria-labelledby="accordion-header-1">
+                            <p class="text-body">
+                                Frontend Mentor offers realistic coding challenges to help developers improve their
+                                frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+                                all levels and ideal for portfolio building.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq-card__accordion-header text-heading-m">
+                        <input type="radio" name="accordion" id="accordion-header-2">
+                        <label for="accordion-header-2">
                             <span class="accordion-title">
                                 Is Frontend Mentor free?
                             </span>
+
                             <svg class="icon-expand" xmlns="http://www.w3.org/2000/svg" width="30" height="31"
                                 fill="none" viewBox="0 0 30 31" alt="Expanding icon" focusable="false"
                                 aria-hidden="true">
@@ -100,24 +102,23 @@
                                 <path fill="#301534"
                                     d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z" />
                             </svg>
-                        </button>
-                    </h2>
-                    <section class="faq-card__accordion-panel" hidden id="accordion-panel-2"
-                        aria-labelledby="accordion-header-2">
-                        <p class="text-body">
-                            Yes, Frontend Mentor offers both free and premium coding challenges, with the free
-                            option providing access to a range of projects suitable for all skill levels.
-                        </p>
-                    </section>
-                </div>
+                        </label>
 
-                <div class="faq-card__accordion-item">
-                    <h2 class="faq-card__accordion-header text-heading-m">
-                        <button class="accordion-btn" type="button" id="accordion-header-3" aria-expanded="false"
-                            aria-controls="accordion-panel-3">
+                        <div class="content accordion-panel" id="accordion-panel-2"
+                            aria-labelledby="accordion-header-2">
+                            <p class="text-body">
+                                Yes, Frontend Mentor offers both free and premium coding challenges, with the free
+                                option providing access to a range of projects suitable for all skill levels.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq-card__accordion-header text-heading-m">
+                        <input type="radio" name="accordion" id="accordion-header-3">
+                        <label for="accordion-header-3">
                             <span class="accordion-title">
                                 Can I use Frontend Mentor projects in my portfolio?
                             </span>
+
                             <svg class="icon-expand" xmlns="http://www.w3.org/2000/svg" width="30" height="31"
                                 fill="none" viewBox="0 0 30 31" alt="Expanding icon" focusable="false"
                                 aria-hidden="true">
@@ -131,24 +132,24 @@
                                 <path fill="#301534"
                                     d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z" />
                             </svg>
-                        </button>
-                    </h2>
-                    <section class="faq-card__accordion-panel" hidden id="accordion-panel-3"
-                        aria-labelledby="accordion-header-3">
-                        <p class="text-body">
-                            Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-                            way to showcase your skills to potential employers!
-                        </p>
-                    </section>
-                </div>
+                        </label>
 
-                <div class="faq-card__accordion-item">
-                    <h2 class="faq-card__accordion-header text-heading-m">
-                        <button class="accordion-btn" type="button" id="accordion-header-4" aria-expanded="false"
-                            aria-controls="accordion-panel-4">
+                        <div class="content accordion-panel" id="accordion-panel-3"
+                            aria-labelledby="accordion-header-3">
+                            <p class="text-body">
+                                Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an
+                                excellent
+                                way to showcase your skills to potential employers!
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq-card__accordion-header text-heading-m">
+                        <input type="radio" name="accordion" id="accordion-header-4">
+                        <label for="accordion-header-4">
                             <span class="accordion-title">
                                 How can I get help if I'm stuck on a Frontend Mentor challenge?
                             </span>
+
                             <svg class="icon-expand" xmlns="http://www.w3.org/2000/svg" width="30" height="31"
                                 fill="none" viewBox="0 0 30 31" alt="Expanding icon" focusable="false"
                                 aria-hidden="true">
@@ -162,16 +163,17 @@
                                 <path fill="#301534"
                                     d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z" />
                             </svg>
-                        </button>
-                    </h2>
-                    <section class="faq-card__accordion-panel" hidden id="accordion-panel-4"
-                        aria-labelledby="accordion-header-4">
-                        <p class="text-body">
-                            The best place to get help is inside Frontend Mentor's Discord community. There's a help
-                            channel where you can ask questions and seek support from other community members.
-                        </p>
-                    </section>
-                </div>
+                        </label>
+
+                        <div class="content accordion-panel" id="accordion-panel-4"
+                            aria-labelledby="accordion-header-4">
+                            <p class="text-body">
+                                The best place to get help is inside Frontend Mentor's Discord community. There's a help
+                                channel where you can ask questions and seek support from other community members.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </main>
