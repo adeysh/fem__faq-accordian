@@ -51,6 +51,15 @@
             border: none;
             padding: 0;
             width: 100%;
+            outline: 2px solid transparent;
+
+            &:focus {
+                outline: 2px solid var(--Electric-Violet);
+                outline-offset: 5px;
+                transition: outline 0.2s ease-in-out;
+                border-radius: a.rem(10);
+                color: var(--Electric-Violet);
+            }
 
             .accordion-title {
                 text-align: left;
