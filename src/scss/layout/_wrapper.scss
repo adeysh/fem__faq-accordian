@@ -6,6 +6,6 @@
 }
 
 .faq-card {
-    width: min(a.rem(700), 100% - a.rem(40));
+    width: min(a.rem(600), 100% - a.rem(40));
     @include a.flexbox($direction: column, $align: flex-start);
 }

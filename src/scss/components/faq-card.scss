@@ -4,7 +4,7 @@
     background-color: var(--White);
     position: absolute;
     top: -100px;
-    border-radius: a.rem(8);
+    border-radius: a.rem(12);
     padding: a.rem(32);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 
@@ -26,7 +26,7 @@
     }
 
     &__icon {
-        width: a.rem(28);
+        width: a.rem(32);
     }
 
     &__content {
@@ -50,6 +50,9 @@
                 label {
                     @include a.flexbox($align: center, $justify: space-between);
                     cursor: pointer;
+                    transition: color 0.2s ease-in-out;
+                    outline: 2px solid transparent;
+
 
                     .icon-expand {
                         display: inline;
@@ -67,10 +70,23 @@
                         text-align: left;
                         flex: 1;
                     }
+
+                    &:hover {
+                        color: var(--Electric-Violet);
+                    }
                 }
 
-                input[type="radio"] {
-                    display: none;
+                input[type="checkbox"] {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    margin: -1px;
+                    border: 0;
+                    padding: 0;
+                    clip: rect(0 0 0 0);
+                    clip-path: inset(100%);
+                    overflow: hidden;
+                    white-space: nowrap;
                 }
 
                 .content {
@@ -86,13 +102,13 @@
                 }
             }
 
-            input[type="radio"]:checked+label+.content {
-                max-height: 500px;
+            input[type="checkbox"]:checked+label+.content {
+                max-height: 1000px;
                 /* fixed value */
                 padding-block: 1rem;
             }
 
-            input[type="radio"]:checked+label {
+            input[type="checkbox"]:checked+label {
                 .icon-expand {
                     display: none;
                 }
@@ -102,8 +118,17 @@
                 }
             }
 
-            input:checked~.content {
+            input[type="checkbox"]:checked~.content {
                 padding-block-start: a.rem(24);
+            }
+
+            input[type="checkbox"]:focus+label,
+            label:focus {
+                outline: 2px solid var(--Electric-Violet);
+                outline-offset: 5px;
+                border-radius: a.rem(10);
+                color: var(--Electric-Violet);
+                transition: outline 0.2s ease-in-out;
             }
         }
     }

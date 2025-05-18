@@ -4,15 +4,17 @@
     /* Colors */
 
     // primary
-    --pure-white: #ffffff;
-    --purple-100: #f9f0ff;
-    --purple-600: #8c6991;
-    --purple-950: #2f1533;
+    --pure-white: hsl(0, 0%, 100%);
+    --purple-100: hsl(276, 100%, 97%);
+    --purple-600: hsl(293, 16%, 49%);
+    --purple-700: hsl(281, 83%, 54%);
+    --purple-950: hsl(292, 42%, 14%);
 
     // naming colors
     --White: var(--pure-white);
     --Magnolia: var(--purple-100);
     --Trendy-Pink: var(--purple-600);
+    --Electric-Violet: var(--purple-700);
     --Revolver: var(--purple-950);
 
     /* Typography */
@@ -24,7 +26,7 @@
     --fs-body: #{rem(16)};
     --fs-small: #{rem(18)};
     --fs-medium: #{rem(24)};
-    --fs-large: #{rem(32)};
+    --fs-large: #{rem(40)};
 
     // font-weight
     --fw-regular: 400;
