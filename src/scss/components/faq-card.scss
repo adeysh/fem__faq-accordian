@@ -53,17 +53,21 @@
             width: 100%;
             outline: 2px solid transparent;
 
+            &:hover,
             &:focus {
                 outline: 2px solid var(--Electric-Violet);
                 outline-offset: 5px;
                 transition: outline 0.2s ease-in-out;
                 border-radius: a.rem(10);
                 color: var(--Electric-Violet);
+                cursor: pointer;
             }
 
             .accordion-title {
                 text-align: left;
                 flex: 1;
+
+
             }
 
             .icon-expand {
